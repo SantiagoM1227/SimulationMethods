@@ -31,6 +31,7 @@ void LatticeGas::Borrese(void){
     for(int i=0;i<Q;i++)
       n[ix][i]=nnew[ix][i]=0;
 }
+
 void LatticeGas::Inicie(int N,double mu,double sigma,Crandom & ran64){
   int ix,i;
   while(N>0){
@@ -51,7 +52,7 @@ void LatticeGas::Show(void){
 }
 void LatticeGas::GrafiqueRho(void){
   for(int ix=0;ix<Lx;ix++)
-    cout<<ix<<" "<<rho(ix)<<endl;
+    cout<<ix<<"\t"<<rho(ix)<<endl;
 }
 void LatticeGas::Colisione(Crandom & ran64){
   for(int ix=0;ix<Lx;ix++){//para cada celda
